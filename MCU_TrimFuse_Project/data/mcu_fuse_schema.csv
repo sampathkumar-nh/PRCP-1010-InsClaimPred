@@ -1,0 +1,11 @@
+field,lsb,nbits,description,MCU-A,MCU-B,MCU-C
+BG_TRIM,0,6,"Bandgap trim code (2 mV/LSB, 32 = no change)",per-die,per-die,per-die
+HSI_TRIM,6,7,"HSI oscillator trim code (0.2 %/LSB, 64 = no change)",per-die,per-die,per-die
+LDO_TRIM,13,5,"LDO trim code (5 mV/LSB, 16 = no change)",per-die,per-die,per-die
+TS_CAL1,18,12,Temperature sensor reading at 30 C,per-die,per-die,per-die
+FLASH_SIZE,30,2,"0=256 KB, 1=512 KB, 2=1 MB",1,0,2
+PERIPH_EN,32,8,Peripheral enable mask,0xFF,0x3F,0xFF
+TEMP_GRADE,40,1,1 = automotive grade,0,0,1
+DEBUG_LOCK,41,1,1 = debug port locked (required in production),1,1,1
+RDP,42,1,1 = read-out protection enabled,0,0,1
+RESERVED,43,21,"Reserved, must be 0",0,0,0

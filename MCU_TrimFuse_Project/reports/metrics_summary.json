@@ -1,0 +1,504 @@
+{
+  "mcu_trim": {
+    "bg": {
+      "target": "bg_trim_code_opt",
+      "derivative": "MCU-A",
+      "cv_mae": 0.4087,
+      "cv_r2": -0.327,
+      "within_1_code": 0.9612,
+      "fold_maes": [
+        0.2916,
+        0.5832,
+        0.5658,
+        0.3223,
+        0.2808
+      ],
+      "baseline_iter": 6.59,
+      "ai_iter": 2.504,
+      "iter_reduction": 62.0
+    },
+    "hsi": {
+      "target": "hsi_trim_code_opt",
+      "derivative": "MCU-A",
+      "cv_mae": 0.8356,
+      "cv_r2": -0.7001,
+      "within_1_code": 0.8068,
+      "fold_maes": [
+        0.6869,
+        0.8135,
+        1.0184,
+        0.8577,
+        0.8015
+      ],
+      "baseline_iter": 7.6,
+      "ai_iter": 2.715,
+      "iter_reduction": 64.3
+    },
+    "ldo": {
+      "target": "ldo_trim_code_opt",
+      "derivative": "MCU-A",
+      "cv_mae": 0.2028,
+      "cv_r2": -0.1474,
+      "within_1_code": 0.9908,
+      "fold_maes": [
+        0.1598,
+        0.3527,
+        0.1742,
+        0.1602,
+        0.1669
+      ],
+      "baseline_iter": 5.59,
+      "ai_iter": 2.257,
+      "iter_reduction": 59.7
+    },
+    "drift_transfer": {
+      "n_finetune": 50,
+      "n_holdout": 792,
+      "mae_zero_shot_mV": 3.966,
+      "mae_finetuned_mV": 0.882,
+      "bg_final_pass_naive_pct": 99.37,
+      "bg_final_pass_ft_pct": 99.49
+    },
+    "runtime_s": 25.8
+  },
+  "pmic_trim": {
+    "buck1": {
+      "target": "buck1_trim_code_opt",
+      "cv_mae": 0.7569,
+      "cv_r2": 0.915,
+      "within_1_code": 0.8845,
+      "fold_maes": [
+        0.8564,
+        0.7389,
+        0.7734,
+        0.6541,
+        0.7618
+      ],
+      "baseline_iter": 44.66,
+      "ai_iter": 1.699,
+      "iter_reduction": 96.2
+    },
+    "buck2": {
+      "target": "buck2_trim_code_opt",
+      "cv_mae": 0.692,
+      "cv_r2": 0.8739,
+      "within_1_code": 0.9126,
+      "fold_maes": [
+        0.7786,
+        0.6828,
+        0.6487,
+        0.6637,
+        0.6864
+      ],
+      "baseline_iter": 44.66,
+      "ai_iter": 1.641,
+      "iter_reduction": 96.3
+    },
+    "ldo1": {
+      "target": "ldo1_trim_code_opt",
+      "cv_mae": 0.7171,
+      "cv_r2": 0.9073,
+      "within_1_code": 0.8986,
+      "fold_maes": [
+        0.7569,
+        0.6924,
+        0.7847,
+        0.6607,
+        0.6909
+      ],
+      "baseline_iter": 44.66,
+      "ai_iter": 1.662,
+      "iter_reduction": 96.3
+    },
+    "ldo2": {
+      "target": "ldo2_trim_code_opt",
+      "cv_mae": 0.8417,
+      "cv_r2": 0.936,
+      "within_1_code": 0.8454,
+      "fold_maes": [
+        0.855,
+        0.7761,
+        0.9561,
+        0.7987,
+        0.8223
+      ],
+      "baseline_iter": 44.66,
+      "ai_iter": 1.777,
+      "iter_reduction": 96.0
+    },
+    "ovp": {
+      "target": "ovp_trim_code_opt",
+      "cv_mae": 0.8974,
+      "cv_r2": 0.6294,
+      "within_1_code": 0.8198,
+      "fold_maes": [
+        0.9017,
+        0.8957,
+        0.8781,
+        0.9019,
+        0.9097
+      ],
+      "baseline_iter": 44.66,
+      "ai_iter": 1.841,
+      "iter_reduction": 95.9
+    },
+    "uvlo": {
+      "target": "uvlo_trim_code_opt",
+      "cv_mae": 0.8813,
+      "cv_r2": 0.8808,
+      "within_1_code": 0.8304,
+      "fold_maes": [
+        0.8683,
+        0.8775,
+        0.9093,
+        0.8564,
+        0.8951
+      ],
+      "baseline_iter": 44.66,
+      "ai_iter": 1.825,
+      "iter_reduction": 95.9
+    },
+    "ilim": {
+      "target": "ilim_trim_code_opt",
+      "cv_mae": 1.5416,
+      "cv_r2": 0.9271,
+      "within_1_code": 0.5923,
+      "fold_maes": [
+        1.0911,
+        1.9203,
+        1.7571,
+        1.3469,
+        1.5928
+      ],
+      "baseline_iter": 44.66,
+      "ai_iter": 2.139,
+      "iter_reduction": 95.2
+    },
+    "otp_validation": {
+      "total_requests": 400,
+      "invalid_ground_truth": 160,
+      "errors_detected": 118,
+      "precision": 1.0,
+      "recall": 0.7375,
+      "f1": 0.8489,
+      "tp": 118,
+      "tn": 240,
+      "fp": 0,
+      "fn": 42
+    },
+    "runtime_s": 19.8
+  },
+  "sensor_calib": {
+    "tco_x": {
+      "target": "tco_x_true_mg_per_C",
+      "cv_r2": 0.8316,
+      "cv_mae": 0.054,
+      "fold_r2s": [
+        0.7738,
+        0.7438,
+        0.8239,
+        0.8812,
+        0.8139
+      ]
+    },
+    "tcs_x": {
+      "target": "tcs_x_true_ppm_per_C",
+      "cv_r2": 0.9329,
+      "cv_mae": 47.8932,
+      "fold_r2s": [
+        0.9365,
+        0.8047,
+        0.9068,
+        0.8974,
+        0.9543
+      ]
+    },
+    "tco_y": {
+      "target": "tco_y_true_mg_per_C",
+      "cv_r2": 0.8259,
+      "cv_mae": 0.0556,
+      "fold_r2s": [
+        0.7796,
+        0.7351,
+        0.8129,
+        0.9019,
+        0.7493
+      ]
+    },
+    "tcs_y": {
+      "target": "tcs_y_true_ppm_per_C",
+      "cv_r2": 0.9341,
+      "cv_mae": 47.9521,
+      "fold_r2s": [
+        0.939,
+        0.7984,
+        0.913,
+        0.8998,
+        0.9529
+      ]
+    },
+    "tco_z": {
+      "target": "tco_z_true_mg_per_C",
+      "cv_r2": 0.8247,
+      "cv_mae": 0.0552,
+      "fold_r2s": [
+        0.7859,
+        0.7455,
+        0.8227,
+        0.8873,
+        0.7497
+      ]
+    },
+    "tcs_z": {
+      "target": "tcs_z_true_ppm_per_C",
+      "cv_r2": 0.9327,
+      "cv_mae": 48.1296,
+      "fold_r2s": [
+        0.9303,
+        0.8044,
+        0.9274,
+        0.8928,
+        0.948
+      ]
+    },
+    "cal_offset_code_x": {
+      "target": "cal_offset_code_x",
+      "cv_r2": 0.9831,
+      "cv_mae": 2.4799,
+      "fold_r2s": [
+        0.9811,
+        0.9846,
+        0.9804,
+        0.9812,
+        0.9834
+      ],
+      "within_1_code": 0.3698
+    },
+    "cal_tco_code_x": {
+      "target": "cal_tco_code_x",
+      "cv_r2": 0.831,
+      "cv_mae": 5.3929,
+      "fold_r2s": [
+        0.7699,
+        0.742,
+        0.8268,
+        0.884,
+        0.8089
+      ],
+      "within_1_code": 0.1766
+    },
+    "cal_tcs_code_x": {
+      "target": "cal_tcs_code_x",
+      "cv_r2": 0.9333,
+      "cv_mae": 9.5514,
+      "fold_r2s": [
+        0.936,
+        0.8023,
+        0.9112,
+        0.8972,
+        0.9537
+      ],
+      "within_1_code": 0.1141
+    },
+    "cal_offset_code_y": {
+      "target": "cal_offset_code_y",
+      "cv_r2": 0.9814,
+      "cv_mae": 2.5445,
+      "fold_r2s": [
+        0.979,
+        0.9821,
+        0.9782,
+        0.982,
+        0.9803
+      ],
+      "within_1_code": 0.3657
+    },
+    "cal_tco_code_y": {
+      "target": "cal_tco_code_y",
+      "cv_r2": 0.8256,
+      "cv_mae": 5.5683,
+      "fold_r2s": [
+        0.7787,
+        0.7347,
+        0.8106,
+        0.9008,
+        0.753
+      ],
+      "within_1_code": 0.1757
+    },
+    "cal_tcs_code_y": {
+      "target": "cal_tcs_code_y",
+      "cv_r2": 0.9346,
+      "cv_mae": 9.5444,
+      "fold_r2s": [
+        0.9389,
+        0.7961,
+        0.916,
+        0.8991,
+        0.9538
+      ],
+      "within_1_code": 0.098
+    },
+    "cal_offset_code_z": {
+      "target": "cal_offset_code_z",
+      "cv_r2": 0.9818,
+      "cv_mae": 2.5599,
+      "fold_r2s": [
+        0.9794,
+        0.9821,
+        0.979,
+        0.9787,
+        0.9833
+      ],
+      "within_1_code": 0.3698
+    },
+    "cal_tco_code_z": {
+      "target": "cal_tco_code_z",
+      "cv_r2": 0.8225,
+      "cv_mae": 5.5405,
+      "fold_r2s": [
+        0.7806,
+        0.7371,
+        0.8231,
+        0.8858,
+        0.7523
+      ],
+      "within_1_code": 0.1697
+    },
+    "cal_tcs_code_z": {
+      "target": "cal_tcs_code_z",
+      "cv_r2": 0.9342,
+      "cv_mae": 9.5304,
+      "fold_r2s": [
+        0.9313,
+        0.8017,
+        0.9351,
+        0.8924,
+        0.9485
+      ],
+      "within_1_code": 0.1109
+    },
+    "hot_point_offset_85C": {
+      "conv_offset_85C_rms_mg": 24.018,
+      "ai_offset_85C_rms_mg": 15.604,
+      "improvement_pct": 35.0
+    },
+    "test_insertion_savings": {
+      "conventional_insertions": 3,
+      "ai_insertions": 1,
+      "conv_test_time_s": 7.2,
+      "ai_test_time_s": 2.4,
+      "time_saved_pct": 66.7,
+      "characterized_train_pct": 19.7,
+      "predicted_pct": 80.3
+    },
+    "runtime_s": 36.7
+  },
+  "soc_binning": {
+    "fmax_min": {
+      "target": "fmax_min_GHz",
+      "cv_r2": 0.9755,
+      "cv_mae": 0.0279,
+      "fold_r2s": [
+        0.9712,
+        0.9718,
+        0.9763,
+        0.9708,
+        0.9107
+      ]
+    },
+    "vmin_max": {
+      "target": "vmin_max_mV",
+      "cv_r2": 0.953,
+      "cv_mae": 4.5873,
+      "fold_r2s": [
+        0.9476,
+        0.9554,
+        0.9573,
+        0.9416,
+        0.8232
+      ]
+    },
+    "sku_assignment": {
+      "rule_based_sku_mix": {
+        "SoC-Std": 0.797,
+        "SoC-Pro": 0.144,
+        "SoC-Lite": 0.057,
+        "scrap": 0.003
+      },
+      "ai_sku_mix": {
+        "SoC-Lite": 0.497,
+        "SoC-Std": 0.357,
+        "SoC-Pro": 0.146
+      },
+      "rule_based_revenue": 614020.0,
+      "ai_revenue": 507800.0,
+      "revenue_uplift_pct": -17.3
+    },
+    "runtime_s": 9.8
+  },
+  "fuse_validation": {
+    "total_fuse_maps": 1500,
+    "injected_errors": 406,
+    "errors_detected": 691,
+    "schema_fields": 10,
+    "precision": 0.5384,
+    "recall": 0.9163,
+    "f1": 0.6782,
+    "tp": 372,
+    "tn": 775,
+    "fp": 319,
+    "fn": 34,
+    "error_type_breakdown": {
+      "missing_debug_lock": 127,
+      "periph_mask_mismatch": 76,
+      "reserved_bit_set": 72,
+      "wrong_flash_size": 64,
+      "trim_field_corrupt": 61,
+      "rdp_missing_automotive": 6
+    },
+    "per_type_detection": {
+      "missing_debug_lock": {
+        "total": 127,
+        "caught": 127,
+        "detection_rate": 1.0
+      },
+      "periph_mask_mismatch": {
+        "total": 76,
+        "caught": 76,
+        "detection_rate": 1.0
+      },
+      "reserved_bit_set": {
+        "total": 72,
+        "caught": 72,
+        "detection_rate": 1.0
+      },
+      "wrong_flash_size": {
+        "total": 64,
+        "caught": 64,
+        "detection_rate": 1.0
+      },
+      "trim_field_corrupt": {
+        "total": 61,
+        "caught": 27,
+        "detection_rate": 0.443
+      },
+      "rdp_missing_automotive": {
+        "total": 6,
+        "caught": 6,
+        "detection_rate": 1.0
+      }
+    },
+    "runtime_s": 0.1
+  },
+  "memory_repair": {
+    "total_arrays": 3000,
+    "greedy_repairable_pct": 61.43,
+    "optimal_repairable_pct": 62.0,
+    "exact_computed_pct": 99.97,
+    "arrays_saved_vs_greedy": 1156,
+    "yield_gain_pct": 0.57,
+    "runtime_s": 0.2
+  },
+  "total_runtime_s": 92.5
+}
